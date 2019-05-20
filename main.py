@@ -2,6 +2,7 @@
 # it's just me fuckin around with dictionaries
 # this is the main module, here is where all the data is initialized and where the "game" actually begins
 import gameshop
+import savingmdl as sv
 data = {
 	"name": "",
 	"exp": 0,
@@ -29,8 +30,23 @@ shop = {
 	}
 }
 
-gameshop.runshop(shop, data, False) #believe it or not THIS ACTUALLY FUCKING WORKS HAHAHAHAHA
-				#IT ACTUALLY FUCKING EDITS THE DATA DICTIONARY :DDD
-				#YEE HAW BITCH
+def rshp():
+	gameshop.runshop(shop, data, False) #believe it or not THIS ACTUALLY FUCKING WORKS HAHAHAHAHA
+					#IT ACTUALLY FUCKING EDITS THE DATA DICTIONARY :DDD
+					#YEE HAW BITCH
+def save():
+	sv.Save(data, shop)
 
+opt = {
+	1: rshp,
+	2: save
+}
 
+print("Options:")
+print("1. Run shop")
+print("2. Save game")
+
+option = int(input("Your choice: "))
+opt[option]()
+
+# halt here
