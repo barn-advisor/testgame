@@ -12,7 +12,7 @@ gameshop.py - thought keeping verything in one file was too bad so i made a modu
 
 savingmdl.py - referenced as sv in main, saves (soon will also load)
 
-i have a mental illness so i wont list other files
+enemies.py isn't finished yet, but shouldb  h
 
 
 ## requirements
