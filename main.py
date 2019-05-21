@@ -49,4 +49,6 @@ print("2. Save game")
 option = int(input("Your choice: "))
 opt[option]()
 
+print("I'll add a loop function later, for now ending program")
+
 # halt here

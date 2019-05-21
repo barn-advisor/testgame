@@ -1,8 +1,8 @@
-# my barely working game
+# testgame
+
+a little something to test my Python skills
 
 i think i made this at 3 am at first, now it's become this
-
-titties
 
 ## files
 
