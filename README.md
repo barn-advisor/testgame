@@ -24,6 +24,12 @@ linux
 
 python 3.x
 
+## makin it work
+
+python3.x main.py
+
+if this doesnt work i will lick your anus so hard itll be burning the next morning
+
 ## contributing
 
 why would you? even though it would be both helpful and a waste of time
