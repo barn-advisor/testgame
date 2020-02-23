@@ -12,7 +12,7 @@ savingmdl.py - Soon(tm)
 
 enemies.py - WIP
 
-## requirementsتل نفسي
+## requirements
 
 At least a terminal
 
