@@ -36,6 +36,8 @@ else:
 	load()
 	print("Welcome back, " + str(globals.data["name"]))
 
+print(len(opt))
+
 while True:
 	print("Options:")
 	print("1. Run shop")
@@ -44,4 +46,7 @@ while True:
 	print("4. Load game")
 	print("5. Quit (don't forget to save!)")
 	option = int(input("Your choice: "))
-	opt[option]()
+	if option <= len(opt) and option > 0:
+		opt[option]()
+	else:
+		print("Out of range.")

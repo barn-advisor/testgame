@@ -3,14 +3,21 @@ import globals
 def runshop():
 	data = globals.data
 	shop = globals.shop
-	print(shop)
+	unavs = 0
+#	print(shop)
 	print("Welcome to the store!")
 	print("Items: ")
 	for x in shop["weapons"]:
-		print("Item n. " + str(x) + ": " + shop["weapons"][x]["name"])
-		print("Desc: " + shop["weapons"][x]["desc"])
-		print("Damage: " + str(shop["weapons"][x]["dmg"]))
-		print("\n") # Crude, but works
+		if shop["weapons"][x]["available"]:
+			print("Item n. " + str(x) + ": " + shop["weapons"][x]["name"])
+			print("Desc: " + shop["weapons"][x]["desc"])
+			print("Damage: " + str(shop["weapons"][x]["dmg"]))
+			print("\n") # Crude, but works
+		else:
+			unavs += 1
+	if unavs >= len(shop["weapons"]):
+		print("All items are unavailable!")
+		return
 	slct = int(input("Buy which item?: "))
 	try:
 		if slct <= len(shop["weapons"]) and slct >= 1:
