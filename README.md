@@ -12,7 +12,7 @@ savingmdl.py - Soon(tm)
 
 enemies.py - WIP
 
-# h.txt 
+h.txt - literally the most improtant file in this game
 
 ## requirements
 
