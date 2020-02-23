@@ -2,6 +2,8 @@ import gameshop
 import saveload
 import enemies
 import globals
+# These dicts are meant as placeholders.
+
 datab = {
 	"name": "",
 	"exp": 0,
@@ -37,6 +39,7 @@ def save():
 
 def load():
 	saveload.Load()
+
 def fite():
 	enemies.fight()
 
