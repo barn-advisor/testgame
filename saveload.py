@@ -19,4 +19,5 @@ def Load():
 	with open("./save/shop.json", 'r') as f:
 		globals.shop = json.load(f)
 	print("Loaded!")
+	globals.DealAsString = True
 #	print(globals.data)

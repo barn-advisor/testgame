@@ -3,6 +3,7 @@ import globals
 def runshop():
 	data = globals.data
 	shop = globals.shop
+	print(shop)
 	print("Welcome to the store!")
 	print("Items: ")
 	for x in shop["weapons"]:
@@ -13,6 +14,9 @@ def runshop():
 	slct = int(input("Buy which item?: "))
 	try:
 		if slct <= len(shop["weapons"]) and slct >= 1:
+			if globals.DealAsString:
+				slct = str(slct)
+
 			print("Item selected: " + shop["weapons"][slct]["name"])
 			print("Price: " + str(shop["weapons"][slct]["price"]))
 			print("Is Available: " + str(shop["weapons"][slct]["available"]))

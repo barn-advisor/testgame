@@ -24,3 +24,4 @@ shop = {
 	}
 }
 
+DealAsString = False
