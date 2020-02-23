@@ -1,7 +1,8 @@
 import gameshop
-import savingmdl as sv
+import saveload
 import enemies
-data = {
+import globals
+datab = {
 	"name": "",
 	"exp": 0,
 	"hp": 100,
@@ -15,7 +16,7 @@ data = {
 	},
 	"wallet": 6
 }
-shop = {
+shopb = {
 	"weapons": {
 		1: {
 			"name": "eat my ass",
@@ -28,23 +29,28 @@ shop = {
 }
 
 def rshp():
-	gameshop.runshop(shop, data, False)
+	gameshop.runshop()
 
-# this function is in the works
-# def save():
-# 	sv.Save(data, shop)
+# this function and the load function is highly experimental
+def save():
+	saveload.Save()
 
+def load():
+	saveload.Load()
 def fite():
-	enemies.fight(data)
+	enemies.fight()
 
 opt = {
 	1: rshp,
-	2: fite
+	2: fite,
+	3: save,
+	4: load
 }
 while True:
 	print("Options:")
 	print("1. Run shop")
 	print("2. Fight!")
-
+	print("3. Save game")
+	print("4. Load game")
 	option = int(input("Your choice: "))
 	opt[option]()

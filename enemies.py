@@ -1,6 +1,7 @@
 # TODO: Add an XP system!
 # Version: FUNCTIONAL (to an extent)
 from random import randint
+import globals
 enemies = { # XP based combat is impossible at the moment
 	1: {
 		"name": "bro you a noob",
@@ -10,10 +11,12 @@ enemies = { # XP based combat is impossible at the moment
 	}
 }
 
-def fight(data):
+def fight():
 	use_reserve = False
-	if data["bp"]["primary_wpn"] == "" and data["bp"]["reserve"] == "":
+	data = globals.data
+	if data["bp"]["primary_wpn"] == "" and data["bp"]["reserve"] == "" or data["bp"]["primary_wpn"]["name"] == "" and data["bp"]["reserve"]["name"] == "":
 		print("You have no weapons!")
+		print(data["bp"])
 		return
 	elif data["bp"]["primary_wpn"] == "":
 		use_reserve = True
