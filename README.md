@@ -1,35 +1,23 @@
-# testgame
+# Simple Python Game
 
-a little something to test my Python skills
-
-i think i made this at 3 am at first, now it's become this
-
-developmnt is slow mainly cuz no time to do shit + enemies.py triggers my laziness
+as it says, it's a simple python game
 
 ## files
 
-main - initializes dictionaries andl oads moduekmdfdljgn
+main.py - The backbone of the whole code. Run this file.
 
-gameshop.py - thought keeping verything in one file was too bad so i made a module for the shop
+gameshop.py - Self-explainatory
 
-savingmdl.py - referenced as sv in main, saves (soon will also load)
+savingmdl.py - Soon(tm)
 
-development is halting soon and i think itll end at enemies.py :(
+enemies.py - WIP
 
-## requirements
+## requirementsتل نفسي
 
-كيف يمكنني أن أقتل نفسي
-
-linux
+At least a terminal
 
 python 3.x
 
-## makin it work
+## running
 
 python3.x main.py
-
-if this doesnt work i will lick your anus so hard itll be burning the next morning
-
-## contributing
-
-why would you? even though it would be both helpful and a waste of time

@@ -1,32 +1,31 @@
-# hopefully the data is global
+# TODO: Rework the code so it isn't spaghetti!
 def runshop(shop, data, throwing):
-	print("Welcome to shit store")
-	print("weapons:")
-	for list in shop["weapons"]:
-        	print("item number " + str(list))
-	        # this *will* work because the values "name" and others shouldnt change
-        	print("name: " + shop["weapons"][list]["name"])
-	        print("desc: " + shop["weapons"][list]["desc"])
-        	print("dmg: " + str(shop["weapons"][list]["dmg"]))
+	print("Welcome to the store!")
+	print("Items: ")
+	for x in shop["weapons"]:
+		print("Item n. " + str(x) + ": " + shop["weapons"][x]["name"])
+		print("Desc: " + shop["weapons"][x]["desc"])
+		print("Damage: " + str(shop["weapons"][x]["dmg"]))
+		print("\n") # Crude, but works
 	slct = int(input("Buy which item?: "))
-	try: #here's the possible failure spot
-		#thats why there's a try-except here
-		if 1 <= slct <= len(shop["weapons"]):
+	try:
+		if slct <= len(shop["weapons"]) and slct >= 1:
 			print("Item selected: " + shop["weapons"][slct]["name"])
 			print("Price: " + str(shop["weapons"][slct]["price"]))
 			print("Is Available: " + str(shop["weapons"][slct]["available"]))
+
 			conf = input("Are you sure? (y/n) ")
-			if conf == "y":
+			if conf.lower() == "y":
 				print("Bought \"" + shop["weapons"][slct]["name"] + "\" for " + str(shop["weapons"][slct]["price"]))
 				data["wallet"] -= shop["weapons"][slct]["price"]
 				if data["bp"]["primary_wpn"] == "":
-					data["bp"]["primary_wpn"] = shop["weapons"][slct]["name"]
+					data["bp"]["primary_wpn"] = shop["weapons"][slct]
 					shop["weapons"][slct]["available"] = False
 				elif data["bp"]["reserve"] == "":
-					data["bp"]["reserve"] = shop["weapons"][slct]["name"]
+					data["bp"]["reserve"] = shop["weapons"][slct]
 					shop["weapons"][slct]["available"] = False
 				else:
-					print("Your backpack's weapon slots are full!!!")
+					raise Exception("Your backpack's weapon slots are full!!!")
 			else:
 				print("Cancelling.")
 		else:
@@ -39,6 +38,4 @@ def runshop(shop, data, throwing):
 		print("ERR: Something happened")
 		if throwing:
 			raise
-	finally:
-		print("done")
 

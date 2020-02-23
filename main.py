@@ -1,8 +1,6 @@
-# "game" that doesn't work
-# it's just me fuckin around with dictionaries
-# this is the main module, here is where all the data is initialized and where the "game" actually begins
 import gameshop
 import savingmdl as sv
+import enemies
 data = {
 	"name": "",
 	"exp": 0,
@@ -17,13 +15,12 @@ data = {
 	},
 	"wallet": 6
 }
-#yeha this probably isnt working
 shop = {
 	"weapons": {
 		1: {
 			"name": "eat my ass",
 			"desc": "this is the fucking",
-			"dmg": 1000,
+			"dmg": 400,
 			"price": 5,
 			"available": True
 		}
@@ -31,24 +28,23 @@ shop = {
 }
 
 def rshp():
-	gameshop.runshop(shop, data, False) #believe it or not THIS ACTUALLY FUCKING WORKS HAHAHAHAHA
-					#IT ACTUALLY FUCKING EDITS THE DATA DICTIONARY :DDD
-					#YEE HAW BITCH
-def save():
-	sv.Save(data, shop)
+	gameshop.runshop(shop, data, False)
+
+# this function is in the works
+# def save():
+# 	sv.Save(data, shop)
+
+def fite():
+	enemies.fight(data)
 
 opt = {
 	1: rshp,
-	2: save
+	2: fite
 }
+while True:
+	print("Options:")
+	print("1. Run shop")
+	print("2. Fight!")
 
-print("Options:")
-print("1. Run shop")
-print("2. Save game")
-
-option = int(input("Your choice: "))
-opt[option]()
-
-print("I'll add a loop function later, for now ending program")
-
-# halt here
+	option = int(input("Your choice: "))
+	opt[option]()
