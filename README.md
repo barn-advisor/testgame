@@ -23,5 +23,8 @@ At least a terminal
 python 3.x
 
 ## running
-
+on linux: 
 python3.x main.py
+
+on windows: 
+py main.py
