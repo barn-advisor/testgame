@@ -1,42 +1,28 @@
 # TODO: Add an XP system!
-# Version: FUNCTIONAL (to an extent)
 from random import randint
 import globals
-enemies = { # XP based combat is impossible at the moment
-	1: {
-		"name": "bro you a noob",
-		"desc": "you still lvl1 lomao",
-		"hp": 1000,
-		"dmg": 45
-	}
-}
 
 def fight():
 	use_reserve = False
 	healing = ""
 	data = globals.data
-
+	enemies = globals.enemies
 	# no guarantee these checks will work
-	if data["bp"]["primary_wpn"] == "" and data["bp"]["reserve"] == "" or data["bp"]["primary_wpn"]["name"] == "" and data["bp"]["reserve"]["name"] == "":
+	if data["bp"]["primary_wpn"] == "" and data["bp"]["reserve"] == "":
 		print("You have no weapons!")
-		print(data["bp"])
 		return
-	if data["bp"]["primary_wpn"] == "":
-		if data["bp"]["reserve"]["healing"]:
-			print("You only have a healing weapon! (And you skipped the primary weapon! HOW)")
-			return
-		use_reserve = True
 	elif data["bp"]["primary_wpn"] != "":
 		if data["bp"]["primary_wpn"]["healing"] and data["bp"]["reserve"] == "":
-			raise Exception("what")
-	elif data["bp"]["reserve"] != "":
-		if data["bp"]["reserve"]["healing"]:
+			print("You only have a healing item!")
+			return
+		elif data["bp"]["primary_wpn"]["healing"]:
+			healing = data["bp"]["primary_wpn"]
+		elif data["bp"]["reserve"]["healing"]:
 			healing = data["bp"]["reserve"]
 
 
 	enemy = enemies[randint(1, len(enemies))]
-
-	# Turn-based combat
+	
 	while enemy["hp"] > 0 or data["hp"] > 0:
 		data["hp"] -= enemy["dmg"]
 		print("Enemy's turn: You received " + str(enemy["dmg"]) + " DMG")
@@ -59,4 +45,8 @@ def fight():
 		if enemy["hp"] <= 0:
 			print("You won!")
 			break
+	del enemy
+	del enemies
+	globals.enemies = globals.enemies_template
+	return
 

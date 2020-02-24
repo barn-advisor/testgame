@@ -33,4 +33,22 @@ shop = {
 	}
 }
 
+enemies = { # XP based combat is impossible at the moment
+	1: {
+		"name": "bro you a noob",
+		"desc": "you still lvl1 lomao",	
+		"hp": 1000,
+		"dmg": 45
+	}
+}
+
+enemies_template = {
+	1: {
+		"name": "bro you a noob",
+		"desc": "you still lvl1 lomao",
+		"hp": 1000,
+		"dmg": 45
+	}
+}
+
 DealAsString = False

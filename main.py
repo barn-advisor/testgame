@@ -7,7 +7,6 @@ from os import path
 def rshp():
 	gameshop.runshop()
 
-# this function and the load function is highly experimental
 def save():
 	saveload.Save()
 
@@ -35,8 +34,6 @@ if not path.exists("save"):
 else:
 	load()
 	print("Welcome back, " + str(globals.data["name"]))
-
-print(len(opt))
 
 while True:
 	print("Options:")
