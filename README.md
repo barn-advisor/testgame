@@ -8,7 +8,7 @@ main.py - The backbone of the whole code. Run this file.
 
 gameshop.py - Self-explainatory
 
-savingmdl.py - Saves and loads the game data
+saveload.py - Saves and loads the game data
 
 enemies.py - partially WIP, deals with the fighting mechanics
 
