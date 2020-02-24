@@ -20,9 +20,9 @@ def fight():
 		elif data["bp"]["reserve"]["healing"]:
 			healing = data["bp"]["reserve"]
 
-
-	enemy = enemies[randint(1, len(enemies))]
-	
+	enemy_level_index = randint(1, data["lvl"])
+	enemy = enemies[enemy_level_index][randint(1, len(enemies[enemy_level_index]))]
+	print(enemy)
 	while enemy["hp"] > 0 or data["hp"] > 0:
 		data["hp"] -= enemy["dmg"]
 		print("Enemy's turn: You received " + str(enemy["dmg"]) + " DMG")
@@ -44,6 +44,7 @@ def fight():
 
 		if enemy["hp"] <= 0:
 			print("You won!")
+			data["exp"] += enemy["xp"]
 			break
 	del enemy
 	del enemies
