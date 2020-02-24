@@ -9,9 +9,13 @@ def runshop():
 	print("Items: ")
 	for x in shop["weapons"]:
 		if shop["weapons"][x]["available"]:
+			print(shop["weapons"][x])
 			print("Item n. " + str(x) + ": " + shop["weapons"][x]["name"])
 			print("Desc: " + shop["weapons"][x]["desc"])
-			print("Damage: " + str(shop["weapons"][x]["dmg"]))
+			if shop["weapons"][x]["healing"]:
+				print("Healing: " + str(shop["weapons"][x]["dmg"]))
+			else:
+				print("Damage: " + str(shop["weapons"][x]["dmg"]))
 			print("\n") # Crude, but works
 		else:
 			unavs += 1

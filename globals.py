@@ -17,8 +17,17 @@ shop = {
 		1: {
 			"name": "eat my ass",
 			"desc": "this is the fucking",
+			"healing": False,
 			"dmg": 400,
 			"price": 5,
+			"available": True
+		},
+		2: {
+			"name": "bitch gun",
+			"desc": "heal test",
+			"healing": True, # turns dmg into heal
+			"dmg": 50,
+			"price": 1,
 			"available": True
 		}
 	}
