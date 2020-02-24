@@ -62,32 +62,34 @@ enemies = { # Level/XP based combat is being experimented with
 }
 
 # eat my shit python
-enemies_template = { # template
-	1: {
+def ass():
+	enemies_template = { # template
 		1: {
-			"name": "bro you a noob",
-			"desc": "you still lvl1 lomao",
-			"hp": 1000,
-			"dmg": 15,
-			"xp": 20
+			1: {
+				"name": "bro you a noob",
+				"desc": "you still lvl1 lomao",
+				"hp": 1000,
+				"dmg": 15,
+				"xp": 20
+			},
+			2: {
+				"name": "cock",
+				"desc": "cock",
+				"hp": 2000,
+				"dmg": 20,
+				"xp": 40
+			}
 		},
 		2: {
-			"name": "cock",
-			"desc": "cock",
-			"hp": 2000,
-			"dmg": 20,
-			"xp": 40
-		}
-	},
-	2: {
-		1: {
-			"name": "death",
-			"desc": "you will die",
-			"hp": 9999,
-			"dmg": 2147483647,
-			"xp": 0
+			1: {
+				"name": "death",
+				"desc": "you will die",
+				"hp": 9999,
+				"dmg": 2147483647,
+				"xp": 0
+			}
 		}
 	}
-}
+	return enemies_template
 
 DealAsString = False

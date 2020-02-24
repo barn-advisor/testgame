@@ -48,6 +48,6 @@ def fight():
 			break
 	del enemy
 	del enemies
-	globals.enemies = globals.enemies_template
+	globals.enemies = globals.ass()
 	return
 
