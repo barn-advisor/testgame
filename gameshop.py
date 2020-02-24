@@ -9,7 +9,7 @@ def runshop():
 	print("Items: ")
 	for x in shop["weapons"]:
 		if shop["weapons"][x]["available"]:
-			print(shop["weapons"][x])
+#			print(shop["weapons"][x])
 			print("Item n. " + str(x) + ": " + shop["weapons"][x]["name"])
 			print("Desc: " + shop["weapons"][x]["desc"])
 			if shop["weapons"][x]["healing"]:

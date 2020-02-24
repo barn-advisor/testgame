@@ -46,7 +46,7 @@ else:
 
 while True:
 	print("Options:")
-	print("1. Run shop")
+	print("1. Go to shop")
 	print("2. Fight!")
 	print("3. Save game")
 	print("4. Load game")
