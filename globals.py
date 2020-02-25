@@ -33,22 +33,63 @@ shop = {
 	}
 }
 
-enemies = { # XP based combat is impossible at the moment
+enemies = { # Level/XP based combat is 99% functional, hopefully
 	1: {
-		"name": "bro you a noob",
-		"desc": "you still lvl1 lomao",	
-		"hp": 1000,
-		"dmg": 45
+		1: {
+			"name": "bro you a noob",
+			"desc": "you still lvl1 lomao",
+			"hp": 1000,
+			"dmg": 15,
+			"xp": 20
+		},
+		2: {
+			"name": "cock",
+			"desc": "cock",
+			"hp": 2000,
+			"dmg": 20,
+			"xp": 40
+		}
+	},
+	2: {
+		1: {
+			"name": "death",
+			"desc": "you will die",
+			"hp": 9999,
+			"dmg": 9223372036854775807,
+			"xp": 0
+		}
 	}
 }
 
-enemies_template = {
-	1: {
-		"name": "bro you a noob",
-		"desc": "you still lvl1 lomao",
-		"hp": 1000,
-		"dmg": 45
+# eat my shit python
+def resetenemies():
+	enemies_template = { # template
+		1: {
+			1: {
+				"name": "bro you a noob",
+				"desc": "you still lvl1 lomao",
+				"hp": 1000,
+				"dmg": 15,
+				"xp": 20
+			},
+			2: {
+				"name": "cock",
+				"desc": "cock",
+				"hp": 2000,
+				"dmg": 20,
+				"xp": 40
+			}
+		},
+		2: {
+			1: {
+				"name": "death",
+				"desc": "you will die",
+				"hp": 9999,
+				"dmg": 9223372036854775807,
+				"xp": 0
+			}
+		}
 	}
-}
+	return enemies_template
 
 DealAsString = False

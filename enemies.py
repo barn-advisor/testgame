@@ -19,10 +19,16 @@ def fight():
 			healing = data["bp"]["primary_wpn"]
 		elif data["bp"]["reserve"]["healing"]:
 			healing = data["bp"]["reserve"]
+	enemy_level_index = 0
+	if data["lvl"] <= len(enemies):
+		enemy_level_index = randint(1, data["lvl"])
+	else:
+		enemy_level_index = randint(1, len(enemies))
 
-
-	enemy = enemies[randint(1, len(enemies))]
-	
+	enemy = enemies[enemy_level_index][randint(1, len(enemies[enemy_level_index]))]
+	print("Enemy: " + enemy["name"])
+	print("Enemy description: " + enemy["desc"])
+	print("HP | DMG | XP: \n" + str(enemy["hp"]) + " | " + str(enemy["dmg"]) + " | " + str(enemy["xp"]))
 	while enemy["hp"] > 0 or data["hp"] > 0:
 		data["hp"] -= enemy["dmg"]
 		print("Enemy's turn: You received " + str(enemy["dmg"]) + " DMG")
@@ -44,9 +50,9 @@ def fight():
 
 		if enemy["hp"] <= 0:
 			print("You won!")
+			data["exp"] += enemy["xp"]
 			break
 	del enemy
 	del enemies
-	globals.enemies = globals.enemies_template
+	globals.enemies = globals.resetenemies()
 	return
-
