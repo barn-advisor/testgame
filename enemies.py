@@ -1,4 +1,5 @@
-# TODO: Add an XP system!
+# DONE: Add an XP system!
+# lmao i forgot to mark this todo done
 from random import randint
 import globals
 
@@ -7,7 +8,7 @@ def fight():
 	healing = ""
 	data = globals.data
 	enemies = globals.enemies
-	# no guarantee these checks will work
+
 	if data["bp"]["primary_wpn"] == "" and data["bp"]["reserve"] == "":
 		print("You have no weapons!")
 		return
