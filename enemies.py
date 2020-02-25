@@ -54,6 +54,5 @@ def fight():
 			break
 	del enemy
 	del enemies
-	globals.enemies = globals.ass()
+	globals.enemies = globals.resetenemies()
 	return
-
