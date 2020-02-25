@@ -62,7 +62,7 @@ enemies = { # Level/XP based combat is 99% functional, hopefully
 }
 
 # eat my shit python
-def ass():
+def resetenemies():
 	enemies_template = { # template
 		1: {
 			1: {
