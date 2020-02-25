@@ -33,7 +33,7 @@ shop = {
 	}
 }
 
-enemies = { # Level/XP based combat is being experimented with
+enemies = { # Level/XP based combat is 99% functional, hopefully
 	1: {
 		1: {
 			"name": "bro you a noob",
