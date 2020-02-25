@@ -20,7 +20,11 @@ def fight():
 		elif data["bp"]["reserve"]["healing"]:
 			healing = data["bp"]["reserve"]
 
-	enemy_level_index = randint(1, data["lvl"])
+	if data["lvl"] <= len(enemies):
+		enemy_level_index = randint(1, data["lvl"])
+	else:
+		enemy_level_index = randint(1, len(enemies))
+
 	enemy = enemies[enemy_level_index][randint(1, len(enemies[enemy_level_index]))]
 	print(enemy)
 	while enemy["hp"] > 0 or data["hp"] > 0:

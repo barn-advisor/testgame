@@ -55,7 +55,7 @@ enemies = { # Level/XP based combat is being experimented with
 			"name": "death",
 			"desc": "you will die",
 			"hp": 9999,
-			"dmg": 2147483647,
+			"dmg": 9223372036854775807,
 			"xp": 0
 		}
 	}
@@ -85,7 +85,7 @@ def ass():
 				"name": "death",
 				"desc": "you will die",
 				"hp": 9999,
-				"dmg": 2147483647,
+				"dmg": 9223372036854775807,
 				"xp": 0
 			}
 		}

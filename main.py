@@ -21,7 +21,7 @@ def quit():
 
 def up_level():
 	if globals.data["exp"] >= 100:
-		globals.data["lvl"] += 1
+		globals.data["lvl"] += (globals.data["exp"] // 100)
 		globals.data["exp"] = 0
 		print("Leveled up! Your level is now: " + str(globals.data["lvl"]))
 	else:
