@@ -1,5 +1,3 @@
-# Testgame-Cpp coming soon 
-
 # Simple Python Game
 
 as it says, it's a simple python game
